@@ -26,3 +26,6 @@ JavaScriptでAPIから投稿データを取得し、一覧表示するアプリ�
 ## Future Improvements
 - ローカル投稿の削除 / 編集
 - localStorage対応
+
+## Demo
+- https://（ここにPagesのURL）
