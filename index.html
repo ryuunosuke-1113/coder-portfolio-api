@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>コーダー練習（API + フォーム）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ヘッダー ===== -->
+  <header>
+    <h1>コーダー練習アプリ</h1>
+  </header>
+
+  <!-- ===== メイン ===== -->
+  <main>
+
+    <!-- =====================
+         STEP2：商品管理
+    ====================== -->
+
+    <section>
+      <h2>商品追加</h2>
+
+      <!-- 商品追加フォーム -->
+      <form id="form">
+        <input type="text" id="nameInput" placeholder="商品名">
+        <input type="number" id="priceInput" placeholder="価格">
+        <button type="submit">追加</button>
+      </form>
+
+      <!-- エラーメッセージ -->
+      <p id="error" style="display:none; color:red;"></p>
+
+      <!-- 商品一覧 -->
+      <ul id="list"></ul>
+    </section>
+
+    <hr>
+
+    <!-- =====================
+         STEP3：API投稿
+    ====================== -->
+
+    <section>
+      <h2>投稿追加（ローカル）</h2>
+
+      <!-- 投稿追加フォーム -->
+      <form id="postForm">
+        <input type="text" id="postTitleInput" placeholder="投稿タイトル">
+        <button type="submit">投稿を追加</button>
+      </form>
+
+      <!-- 投稿エラー -->
+      <p id="postError" style="display:none; color:red;"></p>
+
+      <!-- ローディング -->
+      <p id="loading" style="display:none;">読み込み中...</p>
+
+      <!-- APIエラー -->
+      <p id="apiError" style="display:none; color:red;">
+        データの取得に失敗しました
+      </p>
+
+      <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin: 8px 0;">
+  <button id="reloadBtn" type="button">再読み込み</button>
+
+  <label>
+    表示件数：
+    <select id="limitSelect">
+      <option value="5">5件</option>
+      <option value="10">10件</option>
+      <option value="20">20件</option>
+    </select>
+  </label>
+
+  <input id="searchInput" type="text" placeholder="タイトル検索">
+</div>
+
+
+      <h2>投稿一覧（API + 追加分）</h2>
+
+      <!-- 投稿一覧 -->
+      <ul id="postList"></ul>
+    </section>
+
+  </main>
+
+  <!-- ===== フッター ===== -->
+  <footer>
+    <small>© 2026 Coding Practice</small>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

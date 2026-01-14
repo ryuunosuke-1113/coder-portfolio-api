@@ -1,0 +1,32 @@
+/* 全体共通スタイル */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ヘッダー・フッター共通 */
+header, footer {
+  background: #333;
+  color: white;
+  padding: 16px;
+}
+
+/* カード一覧（横並び） */
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+/* カード1枚分 */
+.card {
+  background: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* スマホ表示用 */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+}
